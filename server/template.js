@@ -1,0 +1,26 @@
+export default ({state, content}) =>{
+  return`
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head>
+  <title>Login</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device,initial-scale=1" />
+
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link href="./css/bootstrap-rtl.min.css" rel="stylesheet" />
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="./css/Main.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="container">${content}</div>
+    <script>
+    window.__PRELOADED_STATE__ = ${JSON.stringify(state)};
+    </script>
+    <script href='http://localhost:8080/bundle.js' />
+</body>
+</html>`;
+};
